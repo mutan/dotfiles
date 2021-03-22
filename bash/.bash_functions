@@ -1,6 +1,8 @@
 # Get weather for current location
 
-met() {
+export MOSCOWLOCATION='55.73550,37.60579'
+
+wetter() {  
     local LOCALE=$(echo ${LANG:-en} | cut -c1-2)
     if [ $# -eq 0 ]; then
         local LOCATION=$(curl -s ipinfo.io/loc)
