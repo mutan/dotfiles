@@ -1,1 +1,1 @@
-git clone https://github.com/mutan/dotfiles.git ~/.dotfiles
+git clone https://github.com/mutan/dotfiles.git ~/dotfiles
