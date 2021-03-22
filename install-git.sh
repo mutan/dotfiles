@@ -1,0 +1,1 @@
+ln -svf ${HOME}/.dotfiles/git/.gitconfig ${HOME}/.gitconfig
