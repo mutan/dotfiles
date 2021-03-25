@@ -1,0 +1,111 @@
+
+#autostart
+exec --no-startup-id hsetroot -center ~/Pictures/triple_monitor.jpg
+exec --no-startup-id xsettingsd &
+exec --no-startup-id compton -b
+
+# Sart shutter at startup
+#exec shutter --min_at_startup
+
+
+# common apps keybinds
+#bindsym Print exec scrot -s -e 'viewnior ~/$f'  'Cheese_%a-%d%b%y_%H.%M.png' 
+bindsym Print exec shutter --select
+bindsym $super+w exec i3lock -i ~/Pictures/triple_monitor.jpg
+bindsym $super+Shift+w exec firefox
+bindsym $super+Shift+f exec thunar;workspace 3;focus
+bindsym $super+Shift+g exec geany
+
+#change volume
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+
+# music control
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioStop exec mpc stop
+
+
+
+bar {
+    colors {
+        background #2f343f
+        statusline #2f343f
+        separator #4b5262
+
+        # colour of border, background, and text
+        focused_workspace       #2f343f #bf616a #d8dee8
+        active_workspace        #2f343f #2f343f #d8dee8
+        inactive_workspace      #2f343f #2f343f #d8dee8
+        urgent_workspacei       #2f343f #ebcb8b #2f343f
+    }
+    status_command i3status
+}
+
+
+
+# window rules, you can find the window class using xprop
+for_window [class=".*"] border pixel 4
+assign [class=URxvt] 1
+assign [class=Firefox|Transmission-gtk] 2
+assign [class=Thunar|File-roller] 3
+assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
+assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
+assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
+for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
+for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
+for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
+
+# colour of border, background, text, indicator, and child_border
+#client.focused              #bf616a #2f343f #d8dee8 #bf616a #d8dee8
+#client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
+#client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+#client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
+#client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
+#client.background           #2f343f
+
+client.focused              #bf616a #bf616a #d8dee8 #bf616a #bf616a
+client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused            #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent               #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background           #2f343f
+
+# class                 border  backgr. text    indicator child_border
+#client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
+#client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+#client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+#client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#client.background       #ffffff
+
+####################################
+# ROB Custom Config
+####################################
+
+# Repeat rate config
+exec --no-startup-id xset r rate 220 40
+# 185 -  delay
+# 100 - interval
+
+# Control volume
+bindsym $super+Control+$alt+k exec amixer -D pulse sset Master 5%+
+bindsym $super+Control+$alt+j exec amixer -D pulse sset Master 5%-
+
+set $mainmonitor  DP-1-1
+set $laptopmonitor eDP-1
+set $secondmonitor DP-1-2
+
+# Use this for 3 monitor setup at work
+#exec --no-startup-id xrandr --output $secondmonitor --mode 1920x1200 --pos 0x0 --rotate normal --output $mainmonitor --primary --mode 1920x1200 --pos 1920x0 --rotate normal --output $laptopmonitor --mode 1920x1080  --pos 3840x0 --rotate normal
+#workspace 1 output $laptopmonitor
+#workspace 2 output $mainmonitor
+#workspace 3 output $secondmonitor
+
+#Use this for only laptop
+#exec --no-startup-id xrandr --output $secondmonitor --off --output $laptopmonitor --primary --mode 1920x1080 --pos 0x0 --rotate normal --output $mainmonitor --off
+#exec --no-startup-id xrandr --output DP-1-2 --off --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-1 --off
+
