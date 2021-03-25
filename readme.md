@@ -17,3 +17,4 @@ ln -svf ${HOME}/dotfiles/i3status/config ${HOME}/.config/i3status/config
 
 ### fonts
 ln -svf ${HOME}/dotfiles/.fonts ${HOME}/.fonts
+fc-cache -fv
