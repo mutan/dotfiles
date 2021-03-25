@@ -181,7 +181,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 4
+for_window [class=".*"] border pixel 2
 assign [class=Firefox] $ws1
 assign [class=Gnome-terminal] $ws2
 assign [class=jetbrains-phpstorm] $ws3
@@ -193,4 +193,47 @@ for_window [class=Firefox|Gnome-terminal] focus
 # finds out, if available)
 bar {
     status_command i3status
+}
+
+
+set $mainmonitor DP-1-1
+set $secondmonitor DP-1-2
+set $laptopmonitor eDP-1
+
+# Use this for 3 monitor setup at work
+#exec --no-startup-id xrandr --output $secondmonitor --mode 1920x1200 --pos 0x0 --rotate normal --output $mainmonitor --primary --mode 1920x1200 --pos 1920x0 --rotate normal --output $laptopmonitor --mode 1920x1080  --pos 3840x0 --rotate normal
+#workspace 1 output $laptopmonitor
+#workspace 2 output $mainmonitor
+#workspace 3 output $secondmonitor
+
+#Use this for only laptop
+exec --no-startup-id xrandr --output $mainmonitor --off --output $secondmonitor --off --output $laptopmonitor --primary --mode 1920x1080 --pos 0x0 --rotate normal
+exec --no-startup-id xrandr --output DP-1-1 --off --output DP-1-2 --off --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+
+
+# Shutdown, Reboot, Lock Screen, and Logout 
+set $mode_power "Power"
+bindsym $mod+Shift+p mode $mode_power
+mode $mode_power {
+    bindsym p         exec systemctl poweroff
+    bindsym r         exec systemctl reboot 
+    bindsym l         exec i3lock -i /home/koromicha/Pictures/linuxtux.png, mode "default"
+    bindsym q         exec --no-startup-id i3-msg exit, mode "default"
+    bindsym h         exec sudo systemctl hibernate 
+    bindsym s         exec sudo systemctl suspend
+    bindsym Return    mode "default"
+    bindsym Escape    mode "default"
+}
+
+# Press $mod+o followed by either f, s, l, m, v, k, d, t, Esc or Return {ENTER),
+# to launch FoxiReader, Skype, lxappearance, thunderbird, VirtualBox,
+# KVM Virt-manager, spectacle, pcmanfm file manager, 
+# or return to the default mode, respectively.
+set $mode_launcher "Launcher"
+bindsym $mod+Shift+o mode $mode_launcher
+mode $mode_launcher {
+    bindsym f exec Firefox
+    bindsym c exec Code
+    bindsym Esc mode "default"
+    bindsym Return mode "default"
 }

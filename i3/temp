@@ -47,18 +47,6 @@ bar {
 
 
 
-# window rules, you can find the window class using xprop
-for_window [class=".*"] border pixel 4
-assign [class=URxvt] 1
-assign [class=Firefox|Transmission-gtk] 2
-assign [class=Thunar|File-roller] 3
-assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*] 4
-assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] 5
-assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Exo-helper*|Lxrandr|Arandr] 6
-for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol] floating enable
-for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
-for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
-
 # colour of border, background, text, indicator, and child_border
 #client.focused              #bf616a #2f343f #d8dee8 #bf616a #d8dee8
 #client.focused_inactive     #2f343f #2f343f #d8dee8 #2f343f #2f343f
@@ -94,18 +82,3 @@ exec --no-startup-id xset r rate 220 40
 # Control volume
 bindsym $super+Control+$alt+k exec amixer -D pulse sset Master 5%+
 bindsym $super+Control+$alt+j exec amixer -D pulse sset Master 5%-
-
-set $mainmonitor  DP-1-1
-set $laptopmonitor eDP-1
-set $secondmonitor DP-1-2
-
-# Use this for 3 monitor setup at work
-#exec --no-startup-id xrandr --output $secondmonitor --mode 1920x1200 --pos 0x0 --rotate normal --output $mainmonitor --primary --mode 1920x1200 --pos 1920x0 --rotate normal --output $laptopmonitor --mode 1920x1080  --pos 3840x0 --rotate normal
-#workspace 1 output $laptopmonitor
-#workspace 2 output $mainmonitor
-#workspace 3 output $secondmonitor
-
-#Use this for only laptop
-#exec --no-startup-id xrandr --output $secondmonitor --off --output $laptopmonitor --primary --mode 1920x1080 --pos 0x0 --rotate normal --output $mainmonitor --off
-#exec --no-startup-id xrandr --output DP-1-2 --off --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output DP-1-1 --off
-
