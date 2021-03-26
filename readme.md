@@ -16,5 +16,8 @@ Mod + Shift + c
 ln -svf ${HOME}/dotfiles/i3status/config ${HOME}/.config/i3status/config
 
 ### fonts
-ln -svf ${HOME}/dotfiles/.fonts ${HOME}/.fonts
+ln -svf ${HOME}/dotfiles/fonts ${HOME}/.fonts
 fc-cache -fv
+
+### wallpaper
+ln -svf ${HOME}/dotfiles/images/Focal-Fossa_WP_1920x1080.png ${HOME}/Pictures/
