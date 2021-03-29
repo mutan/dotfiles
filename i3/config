@@ -15,7 +15,7 @@ floating_modifier $mod
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Noto Sans 12
+font pango: Noto Sans 14
 
 # Switch language - Alt + Shift
 exec --no-startup-id setxkbmap -layout us,ru -option grp:alt_shift_toggle
@@ -181,7 +181,7 @@ assign [class=Firefox] $ws1
 assign [class=Gnome-terminal] $ws2
 assign [class=jetbrains-phpstorm] $ws3
 assign [class=Code] $ws4
-assign [class="Microsoft Teams - Preview"] $ws5
+assign [class="teams-for-linux"] $ws5
 assign [class="Org.gnome.Nautilus"] $ws6
 for_window [class=Pavucontrol] floating enable
 for_window [class=Firefox|Gnome-terminal] focus
@@ -225,7 +225,7 @@ mode $mode_launcher {
     bindsym f       exec firefox, mode "default"
     bindsym p       exec phpstorm, mode "default"
     bindsym c       exec code, mode "default"
-    bindsym t       exec teams, mode "default"
+    bindsym t       exec teams-for-linux, mode "default"
     bindsym s       exec flameshot, mode "default"
     bindsym e       exec nautilus --no-desktop, mode "default"
     bindsym Return  mode "default"
