@@ -143,7 +143,7 @@ set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
 set $ws5 "5: "
-set $ws6 "6"
+set $ws6 "6: "
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -182,6 +182,7 @@ assign [class=Gnome-terminal] $ws2
 assign [class=jetbrains-phpstorm] $ws3
 assign [class=Code] $ws4
 assign [class="Microsoft Teams - Preview"] $ws5
+assign [class="Org.gnome.Nautilus"] $ws6
 for_window [class=Pavucontrol] floating enable
 for_window [class=Firefox|Gnome-terminal] focus
 
@@ -226,6 +227,7 @@ mode $mode_launcher {
     bindsym c       exec code, mode "default"
     bindsym t       exec teams, mode "default"
     bindsym s       exec flameshot, mode "default"
+    bindsym e       exec nautilus --no-desktop, mode "default"
     bindsym Return  mode "default"
     bindsym Escape  mode "default"
 }
