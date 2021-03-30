@@ -1,6 +1,6 @@
 .PHONY: install dotfiles git bash i3 i3status fonts
 
-dotfiles:= dotfile
+dotfiles:= dotfiles
 
 install:
 	sudo apt-get update -y
@@ -20,11 +20,17 @@ bash:
 	ln -svf ${HOME}/$(dotfiles)/bash/.bash_functions ${HOME}/.bash_functions
 
 i3:
+	mkdir -p ${HOME}/.config/i3
 	ln -svf ${HOME}/$(dotfiles)/i3/config ${HOME}/.config/i3/config
 
 i3status:
+	mkdir -p ${HOME}/.config/i3status
 	ln -svf ${HOME}/$(dotfiles)/i3status/config ${HOME}/.config/i3status/config
 
 fonts:
-	ln -svf ${HOME}/$(dotfiles)/fonts ${HOME}/.fonts
+	mkdir -p ${HOME}/.fonts
+	ln -svf ${HOME}/$(dotfiles)/fonts/fa-brands-400.ttf ${HOME}/.fonts
+	ln -svf ${HOME}/$(dotfiles)/fonts/fa-regular-400.ttf ${HOME}/.fonts
+	ln -svf ${HOME}/$(dotfiles)/fonts/fa-solid-900.ttf ${HOME}/.fonts
+	ln -svf ${HOME}/$(dotfiles)/fonts/feather.ttf ${HOME}/.fonts
 	fc-cache -fv
