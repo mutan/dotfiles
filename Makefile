@@ -2,15 +2,13 @@
 
 dotfiles:= dotfiles
 
-install:
-	sudo apt-get update -y
-	sudo apt-get install gnome-tweaks -y
-	sudo apt-get install dconf-editor -y
-	sudo apt-get install ubuntu-restricted-extras -y
-	sudo apt-get install curl wget mc htop git make -y
-	sudo apt-get install i3 i3status dunst rofi -y
+happy: install dotfiles
 
-dotfiles: git bash i3 i3status fonts
+install:
+	./scripts/apt-install.sh
+
+dotfiles:
+	./scripts/symlink.sh
 
 git:
 	ln -svf ${HOME}/$(dotfiles)/git/.gitconfig ${HOME}/.gitconfig
