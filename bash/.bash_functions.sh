@@ -13,7 +13,11 @@ wetter() {
 }
 
 # Create a new directory and enter it
-
 function mk() {
     mkdir -p "$@" && cd "$@"
+}
+
+# display $PATH as one directory per line
+function path() {
+    sed 's/:/\n/g' <<< "$PATH"
 }

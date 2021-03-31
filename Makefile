@@ -16,8 +16,8 @@ git:
 	ln -svf ${HOME}/$(dotfiles)/git/.gitconfig ${HOME}/.gitconfig
 
 bash:
-	ln -svf ${HOME}/$(dotfiles)/bash/.bash_aliases ${HOME}/.bash_aliases
-	ln -svf ${HOME}/$(dotfiles)/bash/.bash_functions ${HOME}/.bash_functions
+	ln -svf ${HOME}/$(dotfiles)/bash/.bash_aliases.sh ${HOME}/.bash_aliases
+	ln -svf ${HOME}/$(dotfiles)/bash/.bash_functions.sh ${HOME}/.bash_functions
 
 i3:
 	mkdir -p ${HOME}/.config/i3
