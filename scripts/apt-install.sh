@@ -16,7 +16,12 @@ function install {
 # Gnome
 install gnome-tweaks
 install dconf-editor
+
+# Software not included to Ubuntu by default due to the legal status
 install ubuntu-restricted-extras
+
+# Add add-apt-repository
+install software-properties-common
 
 # Basic
 install curl
