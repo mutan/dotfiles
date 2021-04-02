@@ -10,13 +10,14 @@
 1. apt install
 2. snap install
 3. script install
-   * php 8 (check: `php -v` and see php version)
-   * composer (check: run `composer` and see composer reference)
-  
-* Chrome
-* Dropbox
-* яндекс диск
-* docker и docker-compose
+   * php 8 (check: `php -v`)
+   * composer (check: `composer -V`)
+   * docker (check: `docker version` / `docker info`)
+   * docker-compose (check: `docker-compose version`)
+   * dropbox (check: `dropbox version`)
+   * яндекс диск (check: `yandex-disk -v`)
+4. symlink dotfiles
+
 
 
 ### ssh keys to github, gitlab
