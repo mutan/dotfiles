@@ -37,6 +37,7 @@ install i3
 install i3status
 install dunst
 install rofi
+install numlockx
 
 # VPN
 install vpnc

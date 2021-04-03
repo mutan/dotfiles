@@ -20,6 +20,9 @@ font pango: Noto Sans 12
 # Switch language - Alt + Shift
 exec --no-startup-id setxkbmap -layout us,ru -option grp:alt_shift_toggle
 
+# Turn num lock on on system start
+exec_always --no-startup-id numlockx on
+
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
