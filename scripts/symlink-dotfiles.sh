@@ -38,10 +38,10 @@ linkDotfile bash/.bash_functions.sh .bash_functions
 # linkDotfile bash/.bashrc.sh
 
 mkdir -p ${HOME}/.config/i3
-linkDotfile i3/config .config/i3/config
+linkDotfile i3/config.sh .config/i3/config
 
 mkdir -p ${HOME}/.config/i3status
-linkDotfile i3status/config .config/i3status/config
+linkDotfile i3status/config.sh .config/i3status/config
 
 mkdir -p ${HOME}/.fonts
 linkDotfile fonts/fa-brands-400.ttf .fonts/fa-brands-400.ttf

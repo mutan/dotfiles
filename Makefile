@@ -16,7 +16,7 @@ script-install:
 	./scripts/programs/php.sh
 
 dotfiles:
-	./scripts/symlink.sh
+	./scripts/symlink-dotfiles.sh
 
 
 docker:
