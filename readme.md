@@ -20,14 +20,10 @@
 
 
 
-### ssh keys to github, gitlab
+### ssh keys to github, gitlab либо скопировать ключи, возможно придется chmod =600 ~/.ssh/id_rsa
 ### Clone repositories
 
 
-
-
-sudo apt-get upgrade
-sudo apt-get autoremove
 
 
 ### Useful commands

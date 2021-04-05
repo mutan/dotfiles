@@ -11,7 +11,7 @@ if [ $? -ne 0 ]; then
     sudo apt-key add YANDEX-DISK-KEY.GPG
     echo "deb http://repo.yandex.ru/yandex-disk/deb/ stable main" >> /etc/apt/sources.list.d/yandex-disk.list
     sudo apt-get update
-    sudo apt-get install yandex-disk
+    sudo apt-get install -y yandex-disk
 else
     echo "Yandex-disk already installed."
 fi
