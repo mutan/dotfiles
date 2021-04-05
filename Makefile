@@ -1,4 +1,6 @@
-.PHONY: setup install apt-install snap-install script-install dotfiles
+.PHONY: setup install
+.PHONY: apt-install snap-install script-install
+.PHONY: dotfiles
 
 setup: install dotfiles
 
@@ -11,9 +13,11 @@ snap-install:
 	./scripts/snap-install.sh
 
 script-install:
-	./scripts/programs/docker.sh
-	./scripts/programs/firefox.sh
 	./scripts/programs/php.sh
+	./scripts/programs/docker.sh
+	./scripts/programs/dropbox.sh
+	./scripts/programs/yandex-disc.sh
+	./scripts/programs/firefox.sh
 
 dotfiles:
 	./scripts/symlink-dotfiles.sh

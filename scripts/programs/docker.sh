@@ -1,11 +1,27 @@
 #!/bin/bash
 
-cd ~
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
+# Install docker
 
-sudo groupadd docker
-sudo usermod -aG docker $USER
-newgrp docker
+which docker &> /dev/null
 
-sudo apt install docker-compose
+if [ $? -ne 0 ]; then
+    cd ~
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sh get-docker.sh
+
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    newgrp docker
+else
+    echo "Docker already installed."
+fi
+
+# Install docker-compose
+
+which docker-compose &> /dev/null
+
+if [ $? -ne 0 ]; then
+    sudo apt install -y docker-compose
+else
+    echo "Docker-compose already installed."
+fi
