@@ -17,8 +17,10 @@ floating_modifier $mod
 # is used in the bar {} block below.
 font pango: Noto Sans 12
 
-# Switch language - Alt + Shift
-exec --no-startup-id setxkbmap -layout us,ru -option grp:alt_shift_toggle
+# Switch language
+# grp:caps_toggle - Caps Lock
+# grp:alt_shift_toggle - Alt + Shift
+exec --no-startup-id setxkbmap -layout us,ru -option grp:caps_toggle
 
 # Turn num lock on on system start
 exec_always --no-startup-id numlockx on
