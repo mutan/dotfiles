@@ -94,11 +94,10 @@ if [ "${UID}" -eq "0" ]; then
 fi
 
 gitBranch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1) /'
 }
 
-export PS1="${pathC}\w \u@\h ${gitC}\$(gitBranch) ${pointerC}\$${normalC} "
-
+export PS1="${pathC}\w${gitC}\$(gitBranch)${pointerC}\$${normalC} "
 
 
 
