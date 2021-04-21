@@ -13,11 +13,12 @@ snap-install:
 	./scripts/snap-install.sh
 
 script-install:
-	./scripts/programs/php.sh
 	./scripts/programs/docker.sh
 	./scripts/programs/dropbox.sh
-	./scripts/programs/yandex-disc.sh
 	./scripts/programs/firefox.sh
+	./scripts/programs/libreoffice.sh
+	./scripts/programs/php.sh
+	./scripts/programs/yandex-disc.sh
 
 post-install:
 	./scripts/programs/post-install.sh
