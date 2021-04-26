@@ -42,3 +42,7 @@ install numlockx
 # VPN
 install vpnc
 install network-manager-vpnc
+
+# PlantUML for VSCode
+install openjdk-14-jre-headless
+install graphviz
