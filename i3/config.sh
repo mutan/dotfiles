@@ -189,7 +189,7 @@ assign [class=Code] $ws4
 assign [class="teams-for-linux"] $ws5
 assign [class="Org.gnome.Nautilus"] $ws6
 for_window [class=Pavucontrol] floating enable
-for_window [class=Firefox|Gnome-terminal] focus
+for_window [class=Firefox|Gnome-terminal|Org.gnome.Nautilus] focus
 
 
 ### Displays
