@@ -21,12 +21,7 @@
    * яндекс диск (check: `yandex-disk -v`)
 4. symlink dotfiles
 
-### ssh keys to github, gitlab либо скопировать ключи, возможно придется chmod =600 ~/.ssh/id_rsa
-### ssh config
-### Clone repositories
-### phpstorm database sources
-### vpn
-### ???
+## Secret install.sh
 
 ### Useful commands
 `i3-msg reload`  
