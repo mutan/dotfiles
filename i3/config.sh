@@ -31,6 +31,8 @@ exec --no-startup-id nm-applet
 
 # Autostart programms
 exec --no-startup-id flameshot
+exec --no-startup-id dropbox start
+exec --no-startup-id yandex-disk start
 
 ###
 
