@@ -2,6 +2,8 @@
 
 dotfiles=$(pwd)
 
+echo "Symlink dotfiles"
+
 function linkDotfile {
     source="${dotfiles}/${1}"
     dest="${HOME}/${2}"

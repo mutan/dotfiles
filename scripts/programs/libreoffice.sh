@@ -6,6 +6,7 @@
 which libreoffice-writer &> /dev/null
 
 if [ $? -ne 0 ]; then
+    echo "Installing: libreoffice-writer"
     sudo add-apt-repository ppa:libreoffice/ppa
     sudo apt-get update
     sudo apt install -y libreoffice-writer
@@ -17,6 +18,7 @@ fi
 which libreoffice-calc &> /dev/null
 
 if [ $? -ne 0 ]; then
+    echo "Installing: libreoffice-calc"
     sudo add-apt-repository ppa:libreoffice/ppa
     sudo apt-get update
     sudo apt install -y libreoffice-calc

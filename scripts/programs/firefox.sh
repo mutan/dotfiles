@@ -6,6 +6,7 @@
 which firefox &> /dev/null
 
 if [ $? -ne 0 ]; then
+    echo "Installing: firefox"
     sudo add-apt-repository ppa:mozillateam/firefox-next -y
     sudo apt update
     sudo apt install -y firefox
