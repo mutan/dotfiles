@@ -4,7 +4,6 @@
 # https://help.ubuntu.ru/wiki/libreoffice
 
 which libreoffice-writer &> /dev/null
-
 if [ $? -ne 0 ]; then
     echo "Installing: libreoffice-writer"
     sudo add-apt-repository ppa:libreoffice/ppa
@@ -16,7 +15,6 @@ fi
 
 
 which libreoffice-calc &> /dev/null
-
 if [ $? -ne 0 ]; then
     echo "Installing: libreoffice-calc"
     sudo add-apt-repository ppa:libreoffice/ppa

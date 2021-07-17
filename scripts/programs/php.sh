@@ -3,7 +3,6 @@
 # Install php
 
 which php &> /dev/null
-
 if [ $? -ne 0 ]; then
     echo "Installing: php"
     sudo add-apt-repository -y ppa:ondrej/php
@@ -18,7 +17,6 @@ fi
 # https://getcomposer.org/doc/00-intro.md#globally
 
 which composer &> /dev/null
-
 if [ $? -ne 0 ]; then
     echo "Installing: composer"
     cd ~
