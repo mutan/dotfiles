@@ -4,7 +4,6 @@
 # https://yandex.ru/support/disk/cli-clients.html
 
 which yandex-disk &> /dev/null
-
 if [ $? -ne 0 ]; then
     echo "Installing: yandex-disk"
     cd ~
