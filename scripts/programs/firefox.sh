@@ -4,7 +4,6 @@
 # https://launchpad.net/~mozillateam/+archive/ubuntu/firefox-next
 
 which firefox &> /dev/null
-
 if [ $? -ne 0 ]; then
     echo "Installing: firefox"
     sudo add-apt-repository ppa:mozillateam/firefox-next -y

@@ -11,8 +11,8 @@ if [ $? -ne 0 ]; then
     sh get-docker.sh
 
     #sudo groupadd docker
-    #sudo usermod -aG docker $USER
-    #newgrp docker
+    sudo usermod -aG docker $USER
+    newgrp docker
 else
     echo "Docker already installed."
 fi
