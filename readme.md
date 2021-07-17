@@ -3,6 +3,7 @@
 * Install Ubuntu, connect wi-fi, login Firefox, login Ubuntu single sign-on
 * `sudo apt install git make`
 * `git clone https://github.com/mutan/dotfiles.git ~/dotfiles`
+* `cd dotfiles`
 * `make setup`
 
 ## Parts
