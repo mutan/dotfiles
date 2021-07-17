@@ -3,7 +3,6 @@
 # Install docker
 
 which docker &> /dev/null
-
 if [ $? -ne 0 ]; then
     echo "Installing: docker"
     cd ~
@@ -20,7 +19,6 @@ fi
 # Install docker-compose
 
 which docker-compose &> /dev/null
-
 if [ $? -ne 0 ]; then
     echo "Installing: docker-compose"
     sudo apt install -y docker-compose

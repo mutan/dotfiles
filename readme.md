@@ -1,6 +1,6 @@
 ## Setup
 
-* Install Ubuntu
+* Install Ubuntu, connect wi-fi
 * `sudo apt install git make`
 * `git clone https://github.com/mutan/dotfiles.git ~/dotfiles`
 * `make setup`
