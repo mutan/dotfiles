@@ -21,7 +21,7 @@ script-install:
 	./scripts/programs/yandex-disc.sh
 
 post-install:
-	./scripts/programs/post-install.sh
+	./scripts/post-install.sh
 
 dotfiles:
 	./scripts/symlink-dotfiles.sh
