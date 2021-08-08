@@ -141,6 +141,24 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
+# redshift modes
+bindsym $mod+t mode "$mode_redshift"
+set $mode_redshift Set colour temperature: (a)uto, (r)eset, (2)500K, (3)000K, (4)000K, (5)000K, (6)000K
+set $kill_redshift pkill -9 redshift;
+mode "$mode_redshift" {
+    bindsym a exec --no-startup-id "$kill_redshift redshift -P -t 5000:4000", mode "default"
+    bindsym r exec --no-startup-id "$kill_redshift redshift -x", mode "default"
+    bindsym 2 exec --no-startup-id "$kill_redshift redshift -P -O 2500", mode "default"
+    bindsym 3 exec --no-startup-id "$kill_redshift redshift -P -O 3000", mode "default"
+    bindsym 4 exec --no-startup-id "$kill_redshift redshift -P -O 4000", mode "default"
+    bindsym 5 exec --no-startup-id "$kill_redshift redshift -P -O 5000", mode "default"
+    bindsym 6 exec --no-startup-id "$kill_redshift redshift -P -O 6000", mode "default"
+ 
+    # exit mode: "Enter" or "Escape"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 ### Workspaces
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -195,6 +213,11 @@ for_window [class=Firefox|Gnome-terminal|Org.gnome.Nautilus] focus
 
 
 ### Displays
+
+# That will return all the connected monitors (like LVDS-1 or DVI-D-0 for instance):
+#   xrandr -q | grep ' connected' | head -n 1 | cut -d ' ' -f1
+# This command sets the brightness to 70%.
+#   xrandr --output eDP-1 --brightness 0.7
 
 set $mainmonitor DP-1-1
 set $secondmonitor DP-1-2
