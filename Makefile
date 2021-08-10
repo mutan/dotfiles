@@ -11,12 +11,14 @@ snap-install:
 docker:
 	./scripts/programs/docker.sh
 
+docker-compose:
+	./scripts/programs/docker-compose.sh
+
 dropbox:
 	./scripts/programs/dropbox.sh
 
 firefox:
 	./scripts/programs/firefox.sh
-
 
 libreoffice:	
 	./scripts/programs/libreoffice.sh
