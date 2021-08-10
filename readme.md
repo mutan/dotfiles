@@ -2,11 +2,11 @@
 
 * Install Ubuntu
 * Connect wi-fi
+* Login Ubuntu single sign-on
 * Login Firefox
 * Login GitHub
-* Login Ubuntu single sign-on
 * `sudo apt update && sudo apt install git make`
-* `git clone git@github.com:mutan/dotfiles.git ~/dotfiles`
+* `https://github.com/mutan/dotfiles.git ~/dotfiles`
 * `cd dotfiles`
 * `make apt-install`
 * `make snap-install`
