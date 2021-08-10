@@ -28,8 +28,8 @@
 * Яндекс диск: `yandex-disk -v`
 
 ## Useful commands / shortcuts
-`i3-msg reload` or `Mod + Shift + c` - reload the configuration file  
-`i3-msg restart` or `Mod + Shift + r` - restart i3 inplace
+`i3-msg reload` or `Mod+Shift+c` - reload the configuration file  
+`i3-msg restart` or `Mod+Shift+r` - restart i3 inplace
 
 i3 Reference Card
 https://i3wm.org/docs/refcard.html
