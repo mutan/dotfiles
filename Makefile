@@ -2,22 +2,29 @@
 .PHONY: apt-install snap-install script-install post-install
 .PHONY: dotfiles
 
-setup: install dotfiles
-
-install: apt-install snap-install script-install post-install
-
 apt-install:
 	./scripts/apt-install.sh
 
 snap-install:
 	./scripts/snap-install.sh
 
-script-install:
+docker:
 	./scripts/programs/docker.sh
+
+dropbox:
 	./scripts/programs/dropbox.sh
+
+firefox:
 	./scripts/programs/firefox.sh
+
+
+libreoffice:	
 	./scripts/programs/libreoffice.sh
+
+php:
 	./scripts/programs/php.sh
+
+yandex-disc:
 	./scripts/programs/yandex-disc.sh
 
 post-install:
@@ -25,7 +32,3 @@ post-install:
 
 dotfiles:
 	./scripts/symlink-dotfiles.sh
-
-
-docker:
-	./scripts/programs/docker.sh
