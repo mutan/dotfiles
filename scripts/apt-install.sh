@@ -30,6 +30,7 @@ install htop
 install git
 install make
 install vim
+install jq
 
 # i3
 install i3
