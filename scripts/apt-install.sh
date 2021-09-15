@@ -32,6 +32,7 @@ install make
 install vim
 install jq
 install npm
+install chromium-browser
 
 # i3
 install i3
