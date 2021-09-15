@@ -31,6 +31,7 @@ install git
 install make
 install vim
 install jq
+install npm
 
 # i3
 install i3
