@@ -7,7 +7,7 @@ if [ $? -ne 0 ]; then
     echo "Installing: php"
     sudo add-apt-repository -y ppa:ondrej/php
     sudo apt update
-    sudo apt install -y php8.0 php8.0-{bz2,cgi,common,cli,curl,intl,dev,fpm,gd,imagick,mbstring,mysql,opcache,pgsql,readline,xml,zip}  
+    sudo apt install -y php8.0 php8.0-{bz2,cgi,common,cli,curl,intl,dev,fpm,gd,imagick,json,mbstring,mysql,opcache,pgsql,readline,xml,zip}  
 else
     echo "PHP already installed."
 fi
